@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/View/main_page.dart';
 
 void main()=> runApp(MyApp());
 
