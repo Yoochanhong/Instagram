@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/View/home_page.dart';
+import 'package:instagram/View/search_page.dart';
+import 'package:instagram/View/reels_page.dart';
+import 'package:instagram/View/shopping_page.dart';
+import 'package:instagram/View/my_page.dart'
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -23,7 +28,7 @@ class _MainPageState extends State<MainPage> {
     SearchPage(),
     ReelsPage(),
     ShoppingPage(),
-    AccountPage(),
+    MyPage(),
   ];
 
   @override
