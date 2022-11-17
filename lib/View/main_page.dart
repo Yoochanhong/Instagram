@@ -18,10 +18,19 @@ class _MainPageState extends State<MainPage> {
     BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: ''),
   ];
 
+  List pages = [
+    HomePage(),
+    SearchPage(),
+    ReelsPage(),
+    ShoppingPage(),
+    AccountPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        body: pages[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.black26,
