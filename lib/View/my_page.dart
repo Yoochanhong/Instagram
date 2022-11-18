@@ -7,7 +7,15 @@ class MyPage extends StatefulWidget {
   State<MyPage> createState() => _MyPageState();
 }
 
-class _MyPageState extends State<MyPage> {
+class _MyPageState extends State<MyPage> with SingleTickerProviderStateMixin {
+  late TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 3, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,6 +73,32 @@ class _MyPageState extends State<MyPage> {
                 ],
               ),
             ],
+          ),
+          TabBar(
+            controller: tabController,
+            tabs: [
+              Tab(icon: Icon(Icons.grid_on_sharp)),
+              Tab(icon: Icon(Icons.movie_creation)),
+              Tab(icon: Icon(Icons.account_box)),
+            ],
+            labelColor: Colors.black,
+          ),
+          Container(
+            height: MediaQuery.of(context).size.width,
+            child: TabBarView(
+              controller: tabController,
+              children: [
+                Container(
+                  color: Colors.red,
+                ),
+                Container(
+                  color: Colors.blue,
+                ),
+                Container(
+                  color: Colors.yellow,
+                ),
+              ],
+            ),
           ),
         ],
       ),
