@@ -36,6 +36,38 @@ class _MyPageState extends State<MyPage> {
           ),
         ],
       ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                width: 80,
+                height: 80,
+                color: Colors.black,
+              ),
+              Column(
+                children: [
+                  Text('0'),
+                  const Text('게시물'),
+                ],
+              ),
+              Column(
+                children: [
+                  Text('433'),
+                  const Text('팔로워'),
+                ],
+              ),
+              Column(
+                children: [
+                  Text('432'),
+                  const Text('팔로잉'),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
